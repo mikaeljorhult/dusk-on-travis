@@ -14,4 +14,4 @@ before_script:
   - php artisan serve &
   - sleep 5  # Give Artisan time to start.
 
-script: vendor/bin/phpunit
+script: php artisan dusk
