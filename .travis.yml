@@ -7,12 +7,13 @@ sudo: false
 
 install:
   - travis_retry composer install --no-interaction --prefer-source
-  - cp .env.example .env      # Create a new .env file
-  - php artisan key:generate  # Generate application key
+  - cp .env.example .env          # Create a new .env file
+  - php artisan key:generate      # Generate application key
 
 before_script:
-  - nohup bash -c "./vendor/laravel/dusk/bin/chromedriver-linux 2>&1 &"  # Manually start Chrome driver
-  - php artisan serve &
-  - sleep 5  # Give Artisan time to start
+  - export DISPLAY=:99.0          # Setup virtual screen
+  - sh -e /etc/init.d/xvfb start  # Setup virtual screen
+  - php artisan serve &           # Start server
+  - sleep 5                       # Give Artisan time to start
 
 script: php artisan dusk
