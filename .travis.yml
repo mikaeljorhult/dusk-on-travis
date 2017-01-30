@@ -11,7 +11,8 @@ install:
   - php artisan key:generate  # Generate application key
 
 before_script:
+  - nohup bash -c "./vendor/laravel/dusk/bin/chromedriver-linux 2>&1 &"  # Manually start Chrome driver
   - php artisan serve &
-  - sleep 5  # Give Artisan time to start.
+  - sleep 5  # Give Artisan time to start
 
 script: php artisan dusk
