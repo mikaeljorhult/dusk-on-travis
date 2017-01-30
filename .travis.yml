@@ -11,7 +11,7 @@ install:
   - php artisan key:generate  # Generate application key
 
 before_script:
-  - php artisan serve
+  - php artisan serve &
   - sleep 5  # Give Artisan time to start.
 
 script: vendor/bin/phpunit
