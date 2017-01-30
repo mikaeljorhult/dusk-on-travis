@@ -8,4 +8,7 @@ sudo: false
 install:
   - travis_retry composer install --no-interaction --prefer-source
 
+before_script:
+  - php artisan key:generate
+
 script: vendor/bin/phpunit
