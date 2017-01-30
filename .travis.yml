@@ -8,7 +8,8 @@ sudo: false
 install:
   - travis_retry composer install --no-interaction --prefer-source
 
-before_script:
-  - php artisan key:generate
+before:
+  - cp .env.example .env  # Create a new .env file
+  - php artisan key:generate # Generate application key
 
 script: vendor/bin/phpunit
