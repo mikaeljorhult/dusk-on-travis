@@ -10,4 +10,8 @@ install:
   - cp .env.example .env      # Create a new .env file
   - php artisan key:generate  # Generate application key
 
+before_script:
+  - php artisan serve
+  - sleep 5  # Give Artisan time to start.
+
 script: vendor/bin/phpunit
