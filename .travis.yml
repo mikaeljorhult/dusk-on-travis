@@ -3,23 +3,15 @@ language: php
 php:
   - 7.0
 
-dist: trusty
-sudo: required
-
 install:
   - travis_retry composer install --no-interaction --prefer-source
   - cp .env.example .env          # Create a new .env file
   - php artisan key:generate      # Generate application key
 
 before_script:
-  - export CHROME_BIN=/usr/bin/google-chrome
-  - export DISPLAY=:99.0          # Setup virtual screen
-  - sh -e /etc/init.d/xvfb start  # Setup virtual screen
-  - sudo apt-get update
-  - sudo apt-get install -y libappindicator1 fonts-liberation
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo dpkg -i google-chrome*.deb
-  - php artisan serve &           # Start server
-  - sleep 5                       # Give Artisan time to start
+  - phantomjs --webdriver=127.0.0.1:9515  # Start PhantomJS driver
+  - sleep 5                               # Give driver time to start
+  - php artisan serve &                   # Start server
+  - sleep 5                               # Give Artisan time to start
 
 script: php artisan dusk
