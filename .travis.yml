@@ -10,8 +10,7 @@ install:
 
 before_script:
   - phantomjs --webdriver=127.0.0.1:9515 &  # Start PhantomJS driver
-  - sleep 5                                 # Give driver time to start
   - php artisan serve &                     # Start server
-  - sleep 5                                 # Give Artisan time to start
+  - sleep 5                                 # Give PhantomJS and Artisan time to start
 
 script: php artisan dusk
