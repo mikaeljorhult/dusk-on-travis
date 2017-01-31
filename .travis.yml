@@ -4,7 +4,7 @@ php:
   - 7.0
 
 install:
-  - travis_retry composer install --no-interaction --prefer-source
+  - travis_retry composer install --no-interaction --prefer-dist --no-suggest
   - cp .env.example .env          # Create a new .env file
   - php artisan key:generate      # Generate application key
 
