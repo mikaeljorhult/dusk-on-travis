@@ -286,16 +286,16 @@
         },
         {
             "name": "laravel/dusk",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/dusk.git",
-                "reference": "fca7b86168beaf500935f0f9667d7071336cb855"
+                "reference": "54353b68369dc7f2f07b9809a0d24bab5ccc6886"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/dusk/zipball/fca7b86168beaf500935f0f9667d7071336cb855",
-                "reference": "fca7b86168beaf500935f0f9667d7071336cb855",
+                "url": "https://api.github.com/repos/laravel/dusk/zipball/54353b68369dc7f2f07b9809a0d24bab5ccc6886",
+                "reference": "54353b68369dc7f2f07b9809a0d24bab5ccc6886",
                 "shasum": ""
             },
             "require": {
@@ -337,20 +337,20 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2017-01-29T22:05:02+00:00"
+            "time": "2017-02-01T16:55:39+00:00"
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.6",
+            "version": "v5.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "5913b960656d7f978605ff9c1513ffbfd190c173"
+                "reference": "3e226e3481aabe835626739a1507c8af17b76082"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/5913b960656d7f978605ff9c1513ffbfd190c173",
-                "reference": "5913b960656d7f978605ff9c1513ffbfd190c173",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/3e226e3481aabe835626739a1507c8af17b76082",
+                "reference": "3e226e3481aabe835626739a1507c8af17b76082",
                 "shasum": ""
             },
             "require": {
@@ -466,7 +466,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-01-27T19:27:15+00:00"
+            "time": "2017-02-01T14:45:01+00:00"
         },
         {
             "name": "laravel/tinker",
